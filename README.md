@@ -1,40 +1,50 @@
-<<<<<<< HEAD
-# pokemon-explorer
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Pokemon Explorer Web App
+Web app that displays a list of pokemon cards. Each card shows the pokemon name, id and type. Cards are clickable. By clicking this card you will be able to see details of that particular pokemon.
 
-## Getting Started
+Technologies used: 
+Next.js
+Typescript
+Tailwind
 
-First, run the development server:
+API used:
+https://pokeapi.co/
 
-```bash
+Github Link: https://github.com/neetasawant/pokemon-explorer
+
+Instructions:
+Run the following commands in cmd → 
+
+git clone https://github.com/neetasawant/pokemon-explorer.git
+
+cd pokemon-explorer
+
+npm i
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to browser: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Screenshot showing homepage:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Searchbar: Search for your favourite pokemon. Enter name of pokemon
 
-To learn more about Next.js, take a look at the following resources:
+List of Pokemon: Contains cards displaying image, name, id, type of each pokemon. Clickable cards which open to show more details of the selected pokemon
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Screenshot showing the details page of Pokemon selected or clicked
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Shows Pokemon details:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Image of Pokemon
+Id
+Name
+Weight
+Height
+Abilities
+Types
+Moves
+Stats
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> e61a314 (next js structure with typescript, tailwind)
+Back button: to go back to the list
+
