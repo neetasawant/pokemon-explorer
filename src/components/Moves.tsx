@@ -1,10 +1,9 @@
 interface Move {
   name: string;
-  power: number; // Optional property
-  accuracy: number; // Optional property
+  power: string; // Optional property
+  accuracy: string; // Optional property
+  pp: string;
   type: string;
-  pp: number;
-  class: string;
   damage_class: string; // Optional property
 }
 

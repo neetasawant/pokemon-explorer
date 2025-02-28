@@ -17,6 +17,10 @@ interface Pokemon {
     };
   };
 }
+interface PokemonResult {
+  name: string;
+  url: string;
+}
 import { useState, useEffect } from "react";
 import PokemonCard from "@/components/PokemonCard";
 import SearchBar from "@/components/SearchBar";
@@ -36,7 +40,7 @@ export default function Home() {
         );
         const data = await response.json();
         const details = await Promise.all(
-          data.results.map(async (pokemon: any) => {
+          data.results.map(async (pokemon: PokemonResult) => {
             const res = await fetch(pokemon.url);
             return res.json();
           })
@@ -44,20 +48,20 @@ export default function Home() {
 
         setPokemonDetails(details); //update state to store pokemon details
         setLoading(false);
-      } catch (e: any) {
+      } catch (error) {
         setLoading(false);
-        console.error("Error:", e);
-        setError(e.message);
+        console.error("Error:", error);
+        setError("Error occured");
       }
     };
 
-    getPokemonList(); 
+    getPokemonList();
   }, []);
 
   if (loading)
     return <p className="text-center text-black text-xl">Loading Pokemon...</p>;
 
-  const filteredPokemon = pokemonDetails.filter((pokemon: any) =>
+  const filteredPokemon = pokemonDetails.filter((pokemon) =>
     pokemon.name.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -67,7 +71,7 @@ export default function Home() {
       {error && <p className="text-red-500 text-center">{error}</p>}
       <div className=" grid lg:grid-cols-4 xl:grid-cols-4 gap-x-4 gap-y-8 place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 p-8">
         {filteredPokemon.length > 0 ? (
-          filteredPokemon.map((pokemon: any) => (
+          filteredPokemon.map((pokemon) => (
             <PokemonCard
               key={pokemon.id}
               id={pokemon.id}
