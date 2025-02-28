@@ -28,6 +28,14 @@ interface Move {
   damage_class: string; 
 }
 
+interface MoveInfo {
+  move: {
+    name: string;
+    url: string;
+  };
+  version_group_details: any[]; 
+}
+
 interface Pokemon {
   id: number;
   name: string;
@@ -73,7 +81,7 @@ export default function PokemonDetail() {
         const data = await response.json();
 
         const moveDetails = await Promise.all(
-          data.moves.slice(0, 8).map(async (move: any) => {
+          data.moves.slice(0, 8).map(async (move: MoveInfo) => {
             const moveRes = await fetch(move.move.url);
             const moveData = await moveRes.json();
             return {
