@@ -1,7 +1,7 @@
 Pokemon Explorer Web App
 Web app that displays a list of pokemon cards. Each card shows the pokemon name, id and type. Cards are clickable. By clicking this card you will be able to see details of that particular pokemon.
 
-Demo: https://67c1a4a51f45a9354971ba01--pokemon-explorer-101.netlify.app/
+Demo: [https://67c1a4a51f45a9354971ba01--pokemon-explorer-101.netlify.app/](Click here to preview the site/)
 
 Technologies used: 
 Next.js
