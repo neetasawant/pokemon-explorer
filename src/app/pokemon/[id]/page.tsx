@@ -122,10 +122,10 @@ export default function PokemonDetail() {
   return (
     <div className="flex flex-col p-8">
       {/* Back button */}
-      <div className="absolute top-8 left-8 z-10">
+      <div className="absolute top-28 left-8 z-8">
         <button
           onClick={() => router.back()}
-          className="px-8 py-2 bg-yellow-300 text-blue-900 shadow-md font-bold"
+          className="px-4 py-2 bg-yellow-300 text-blue-900 shadow-md font-bold"
         >
           {`Back`}
         </button>

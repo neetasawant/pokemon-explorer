@@ -38,9 +38,9 @@ export default function PokemonCard({
   return (
     <Link
       href={{ pathname: `/pokemon/${id}`, query: { color: randomColor } }}
-      className={`w-[350px] h-[380px] ${randomColor} shadow-3xl border border-gray-200 flex flex-col items-center justify-center p-4`}
+      className={`w-[350px] h-[400px] ${randomColor} shadow-3xl border border-gray-200 flex flex-col items-center justify-center p-4`}
     >
-      <div className="w-72 h-72 flex justify-center items-center">
+      <div className="w-64 h-64 flex justify-center items-center">
         <img
           className="w-full h-full object-contain drop-shadow-md relative mb-2"
           src={imageUrl}
@@ -51,7 +51,7 @@ export default function PokemonCard({
       <h3 className="text-gray-800 text-lg font-medium mt-3">{`#${id}`}</h3>
       <h5 className="text-3xl font-bold text-gray-700 capitalize">{name}</h5>
 
-      <div className="flex gap-3 mt-4">
+      <div className="flex gap-3">
         {type.map((type, index) => (
           <Types key={index} typeName={type.type.name} />
         ))}
